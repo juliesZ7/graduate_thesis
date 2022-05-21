@@ -1,10 +1,7 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
-import 'package:graduate_thesis/components_library/buttons.dart';
+import 'package:graduate_thesis/screen/Homepage/category.dart';
+import 'package:graduate_thesis/screen/Homepage/recent.dart';
 import 'package:graduate_thesis/style_guide/style_guide.dart';
-
-import '../../components_library/clickable_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -12,6 +9,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
+    String? searchText;
     return Scaffold(
       backgroundColor: ColorGuide().shade4,
       body: Column(
@@ -47,8 +45,8 @@ class HomePage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(15),
                               border: Border.all(color: ColorGuide().primary4)),
                           child: Row(children: [
-                            input("You vault", FontWeight.w700,
-                                ColorGuide().primary4,14),
+                            input("Your vault", FontWeight.w700,
+                                ColorGuide().primary4, 14),
                             SizedBox(
                               width: 10,
                             ),
@@ -67,13 +65,13 @@ class HomePage extends StatelessWidget {
                 bottom: 0,
                 child: Container(
                   width: screenWidth,
+                  height: 44,
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
-                    child: ClickableWidget(
-                      navigation: "NEED TO ADD NAVIGATION!!!!",
+                    child: Form(
                       child: Container(
                         decoration: BoxDecoration(
-                          boxShadow: [Shadow().light1],
+                            boxShadow: [Shadow().light1],
                             color: ColorGuide().text3,
                             borderRadius: BorderRadius.circular(10)),
                         padding: EdgeInsets.all(10),
@@ -82,18 +80,33 @@ class HomePage extends StatelessWidget {
                           SizedBox(
                             width: 16,
                           ),
-                          input("Type account name", FontWeight.w500,
-                              ColorGuide().text5,14)
+                          Expanded(
+                              child: TextFormField(
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: "Type account name",
+                              hintStyle: TextStyle(
+                                  color: ColorGuide().text5, fontSize: 14),
+                            ),
+                            onSaved: (value) => searchText = value,
+                          )),
                         ]),
                       ),
                     ),
+                    // child: TextField(controller: searchText,),
                   ),
                 ),
               )
             ],
           ),
-          SizedBox(height: 100,),
-          DefaultButton(text: "Hello", fontWeight: FontWeight.w700, textColor: ColorGuide().text3,fontSize: 14,buttonColor: ColorGuide().primary1,),
+          SizedBox(
+            height: 24,
+          ),
+          CategoryFeature(),
+          SizedBox(
+            height: 16,
+          ),
+          RecentAccountFeature()
         ],
       ),
     );

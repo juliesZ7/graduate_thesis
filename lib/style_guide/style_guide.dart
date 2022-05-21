@@ -45,12 +45,11 @@ class StickerName {
   String others = "assets/icons/other.svg";
   String lock = "assets/icons/padlock.svg";
   String wallet = "assets/icons/purse.svg";
-  String blankSearch =
-      "assets/icons/search.svg";
+  String blankSearch = "assets/icons/search.svg";
 }
 
 //Icon Store
-class IconName{
+class IconName {
   String home = "assets/icons/fi-rr-home.svg";
   String settings = "assets/icons/setting-1881213.svg";
   String add = "assets/icons/circle-add.svg";
@@ -67,6 +66,7 @@ Widget icon(String string, Color? color, double size) {
     height: size,
   );
 }
+
 Widget sticker(String string, double size) {
   return SvgPicture.asset(
     string,
@@ -77,21 +77,24 @@ Widget sticker(String string, double size) {
 
 //Typography
 
-Text input(String string, FontWeight fontWeight, Color color,double fontSize) {
+Text input(String string, FontWeight fontWeight, Color color, double fontSize) {
   return Text(
     string,
-    style: TextStyle(fontWeight: fontWeight, color: color,fontSize: fontSize),
+    style: TextStyle(fontWeight: fontWeight, color: color, fontSize: fontSize),
   );
 }
 
 //ShadowSetting
 
 class Shadow {
-  BoxShadow light1 = shadow(16,0.16);
-BoxShadow light2 = shadow(16,0.24);
-BoxShadow harsh = shadow(8,0.32);
+  BoxShadow light1 = shadow(16, 0.16);
+  BoxShadow light2 = shadow(16, 0.24);
+  BoxShadow harsh = shadow(8, 0.32);
 }
 
-BoxShadow shadow(double blurRadius,double opacity){
-  return BoxShadow(color: ColorGuide().shadow.withOpacity(opacity),blurRadius:blurRadius,blurStyle: BlurStyle.normal);
+BoxShadow shadow(double blurRadius, double opacity) {
+  return BoxShadow(
+      color: ColorGuide().shadow.withOpacity(opacity),
+      blurRadius: blurRadius,
+      blurStyle: BlurStyle.normal);
 }
