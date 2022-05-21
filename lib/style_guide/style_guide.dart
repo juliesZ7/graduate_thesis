@@ -55,6 +55,7 @@ class IconName {
   String add = "assets/icons/circle-add.svg";
   String copy = "assets/icons/documents.svg";
   String search = "assets/icons/search-1.svg";
+  String random = "assets/icons/random-(1).svg";
 }
 
 //Call Icon

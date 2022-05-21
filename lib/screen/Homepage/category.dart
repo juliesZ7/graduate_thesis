@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:graduate_thesis/components_library/clickable_widget.dart';
+import 'package:graduate_thesis/components_library/system/clickable_widget.dart';
 import 'package:graduate_thesis/style_guide/style_guide.dart';
 
 class CategoryFeature extends StatelessWidget {
@@ -25,29 +25,20 @@ class CategoryFeature extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             IntrinsicHeight(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              child: Wrap(
+                runSpacing: 16,
                 children: [
                   categoryItem("Social Media",
                       sticker(StickerName().socialMedia, 40), screenWidth),
-                  SizedBox(
-                    width: 16,
-                  ),
                   categoryItem(
                       "Games", sticker(StickerName().games, 40), screenWidth),
-                  SizedBox(
-                    width: 16,
-                  ),
                   categoryItem(
                       "Work", sticker(StickerName().works, 40), screenWidth),
+                  categoryItem(
+                      "Others", sticker(StickerName().others, 40), screenWidth),
                 ],
               ),
             ),
-            SizedBox(
-              height: 18,
-            ),
-            categoryItem(
-                "Others", sticker(StickerName().others, 40), screenWidth),
           ],
         ),
       ]),
