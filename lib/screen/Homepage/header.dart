@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:graduate_thesis/components_library/system/clickable_widget.dart';
+
 
 import '../../style_guide/style_guide.dart';
 
@@ -45,8 +45,8 @@ class _HeaderHomePageState extends State<HeaderHomePage> {
                   SizedBox(
                     width: 10,
                   ),
-                  ClickableWidget(
-                    function: () {},
+                  GestureDetector(
+                    onTap: () {},
                     child: Container(
                       padding: EdgeInsets.all(10),
                       decoration: BoxDecoration(

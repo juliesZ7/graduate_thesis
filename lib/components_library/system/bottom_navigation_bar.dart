@@ -1,7 +1,6 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:graduate_thesis/components_library/system/clickable_widget.dart';
 import 'package:graduate_thesis/style_guide/style_guide.dart';
 
 class AppBottomNavigationBar extends StatefulWidget {
@@ -30,8 +29,8 @@ class _BottomNavigationBarState extends State<AppBottomNavigationBar> {
   }
 
   Widget navigationItem(String logo, int index, String pageRoute) {
-    return ClickableWidget(
-        function: () {
+    return GestureDetector(
+        onTap: () {
           setState(() {
             selectedPage = index;
             Navigator.of(context).pushNamed(pageRoute);

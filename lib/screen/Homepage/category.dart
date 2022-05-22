@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:graduate_thesis/components_library/system/clickable_widget.dart';
 import 'package:graduate_thesis/style_guide/style_guide.dart';
 
 class CategoryFeature extends StatelessWidget {
@@ -14,7 +13,7 @@ class CategoryFeature extends StatelessWidget {
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 16),
-          child: input("Category", FontWeight.w800, ColorGuide().primary1, 16),
+          child: input("Category", FontWeight.w700, ColorGuide().primary1, 16),
         ),
         SizedBox(
           height: 16,
@@ -49,8 +48,8 @@ class CategoryFeature extends StatelessWidget {
 Widget categoryItem(String name, Widget icon, double screenWidth) {
   return Container(
     width: 100,
-    child: ClickableWidget(
-      function: () {},
+    child: GestureDetector(
+      onTap: () {},
       child: Column(
         children: [
           Container(

@@ -56,6 +56,7 @@ class IconName {
   String copy = "assets/icons/documents.svg";
   String search = "assets/icons/search-1.svg";
   String random = "assets/icons/random-(1).svg";
+  String back1 = "assets/icons/keyboard_backspace.svg";
 }
 
 //Call Icon
