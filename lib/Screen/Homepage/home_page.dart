@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
         ListView(
           children: [
             SizedBox(
-              height: 132,
+              height: 124,
             ),
             Column(
               children: [

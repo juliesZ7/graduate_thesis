@@ -31,7 +31,7 @@ class _HeaderHomePageState extends State<HeaderHomePage> {
               padding: EdgeInsets.all(24),
               height: 129,
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Expanded(
                     child: Text(
@@ -71,7 +71,7 @@ class _HeaderHomePageState extends State<HeaderHomePage> {
           ],
         ),
         Positioned(
-          top: 100,
+          top: 107,
           child: Container(
             width: screenWidth,
             height: 44,

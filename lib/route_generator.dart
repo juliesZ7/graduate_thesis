@@ -8,7 +8,7 @@ class RouteGenerator {
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(builder: (_) => HomePage());
-      case '/generatePasswordHomPage':
+      case '/generatePasswordHomePage':
         return MaterialPageRoute(builder: (_) => Generate_Password_HomePage());
       default:
         return _errorRoute();

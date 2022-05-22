@@ -3,12 +3,19 @@ import 'package:graduate_thesis/components_library/system/clickable_widget.dart'
 
 import '../../style_guide/style_guide.dart';
 
-class RecentAccountFeature extends StatelessWidget {
+class RecentAccountFeature extends StatefulWidget {
   const RecentAccountFeature({Key? key}) : super(key: key);
 
   @override
+  State<RecentAccountFeature> createState() => _RecentAccountFeatureState();
+}
+
+class _RecentAccountFeatureState extends State<RecentAccountFeature> {
+  double cloneScreenWidth = 0;
+  @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
+    cloneScreenWidth = screenWidth;
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 16),
       width: screenWidth,
@@ -66,7 +73,11 @@ class RecentAccountFeature extends StatelessWidget {
     return Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
       Expanded(
         child: TextButton(
-          onPressed: () {},
+          onPressed: () {
+            setState(() {
+              showAlertDialog(context, cloneScreenWidth);
+            });
+          },
           child: Row(
             children: [
               sticker(logoName, 32),
@@ -122,5 +133,46 @@ class RecentAccountFeature extends StatelessWidget {
             ),
           ))
     ]);
+  }
+
+  void showAlertDialog(BuildContext context, double screenWidth) {
+    showDialog(
+        barrierDismissible: false,
+        context: context,
+        builder: (BuildContext context) {
+          return Container(
+            width: screenWidth,
+            margin: EdgeInsets.symmetric(horizontal: 40),
+            padding: EdgeInsets.all(24),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: ColorGuide().text3),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Expanded(
+                      child: input("Account Information", FontWeight.w500,
+                          ColorGuide().text1, 16),
+                    ),
+                    ClickableWidget(
+                        child: Container(
+                            child: Icon(
+                          Icons.close,
+                          color: ColorGuide().text1,
+                          size: 24,
+                        )),
+                        function: () {
+                          setState(() {
+                            Navigator.pop(context);
+                          });
+                        }),
+                  ],
+                )
+              ],
+            ),
+          );
+        });
   }
 }
