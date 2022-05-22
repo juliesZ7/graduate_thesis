@@ -1,8 +1,11 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:graduate_thesis/components_library/system/bottom_navigation_bar.dart';
 
 class ClickableWidget extends StatefulWidget {
   final Widget child;
-  final Function function;
+  final VoidCallback function;
   const ClickableWidget({Key? key, required this.child, required this.function})
       : super(key: key);
 
@@ -15,15 +18,13 @@ class _DefaultButtonState extends State<ClickableWidget> {
   Widget build(BuildContext context) {
     return clickableWidget(widget.child, widget.function);
   }
-}
 
-Widget clickableWidget(Widget child, Function function) {
-  return TextButton(
-    onPressed: () {
-      function;
-    },
-    style: ButtonStyle(
-        overlayColor: MaterialStateProperty.all(Colors.transparent)),
-    child: child,
-  );
+  Widget clickableWidget(Widget child, VoidCallback function) {
+    return TextButton(
+      onPressed: function,
+      style: ButtonStyle(
+          overlayColor: MaterialStateProperty.all(Colors.transparent)),
+      child: child,
+    );
+  }
 }
