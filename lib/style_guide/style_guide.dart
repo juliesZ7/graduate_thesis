@@ -56,7 +56,20 @@ class IconName {
   String copy = "assets/icons/documents.svg";
   String search = "assets/icons/search-1.svg";
   String random = "assets/icons/random-(1).svg";
-  String back1 = "assets/icons/keyboard_backspace.svg";
+  String back = "assets/icons/keyboard_backspace.svg";
+  String user = 'assets/icons/account_circle_full.svg';
+  String email = 'assets/icons/alternate_email.svg';
+  String backIOS = 'assets/icons/arrow_back_ios.svg';
+  String back2 = "assets/icons/arrow_back.svg";
+  String forward = "assets/icons/arrow_forward.svg";
+  String checkRec = "assets/icons/check_box_black_24dp 1.svg";
+  String checkRec2 = "assets/icons/check_box_outline_blank_black_24dp 1.svg";
+  String checkCir = "assets/icons/circle-check.svg";
+  String checkCir2 = "assets/icons/circle-check-fill.svg";
+  String close = "assets/icons/close.svg";
+  String expanded = "assets/icons/expand_more.svg";
+  String eyeOff = "assets/icons/Eye_off.svg";
+  String eye = "assets/icons/Eye.svg";
 }
 
 //Call Icon

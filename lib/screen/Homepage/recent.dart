@@ -273,7 +273,7 @@ class _RecentAccountFeatureState extends State<RecentAccountFeature> {
                           textColor: ColorGuide().text3,
                           buttonColor: ColorGuide().primary1,
                           fontSize: 14,
-                          iconName: IconName().back1,
+                          iconName: IconName().back,
                           iconColor: ColorGuide().text3,
                           iconSize: 24,
                           isIconLeft: true,

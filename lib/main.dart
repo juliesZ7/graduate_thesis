@@ -9,7 +9,7 @@ void main() {
       theme: ThemeData(
         fontFamily: 'PlusJakartaSans',
       ),
-      initialRoute: "/",
+      initialRoute: "/signIn",
       onGenerateRoute: RouteGenerator.generateRoute,
     ),
   );
