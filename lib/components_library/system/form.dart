@@ -15,7 +15,10 @@ class AppFormState extends State<AppForm> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      style: TextStyle(color: ColorGuide().text2,fontFamily: 'PlusJakartaSans',fontWeight: FontWeight.w700),
+      style: TextStyle(
+          color: ColorGuide().text2,
+          fontFamily: 'PlusJakartaSans',
+          fontWeight: FontWeight.w700),
       decoration: InputDecoration(
           enabledBorder: UnderlineInputBorder(
               borderSide: BorderSide(color: ColorGuide().shade6, width: 2)),
